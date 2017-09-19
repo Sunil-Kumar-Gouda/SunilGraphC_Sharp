@@ -37,6 +37,7 @@ namespace GraphADT.Directed
         public void AddEdge(int s,DirectedEdge edge)
         {
             this[s].Add(edge);
+            _edges.Add(edge);
         }
         #endregion
         #region static methods
@@ -71,6 +72,7 @@ namespace GraphADT.Directed
             {
                 this[i] = new List<DirectedEdge>();
             }
+            _edges = new List<DirectedEdge>();
             Console.Write("Enter the number of edges");
             E = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter source  followed by destination followed by weight with space as delimeter");
@@ -86,7 +88,7 @@ namespace GraphADT.Directed
         }
         #endregion
     }
-    public class DirectedEdge
+    public class DirectedEdge : IComparable<DirectedEdge>
     {
         private int _to;
         private int _from;
@@ -106,6 +108,24 @@ namespace GraphADT.Directed
             get { return _weight; }
             set { _weight = value; }
         }
+        public int Other(int value)
+        {
+                if (value == To)
+                    return From;
+                else if (value == From)
+                    return To;
+                else return -1;
+        }
 
+
+        public int CompareTo(DirectedEdge other)
+        {
+            if (Weight < other.Weight)
+                return -1;
+            else if (Weight > other.Weight)
+                return 1;
+            else
+                return 0;
+        }
     }
 }

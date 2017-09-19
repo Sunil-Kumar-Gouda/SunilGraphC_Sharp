@@ -1,4 +1,5 @@
-﻿using Graph.ShortestPath;
+﻿using Graph.MST;
+using Graph.ShortestPath;
 using GraphADT.Directed;
 using System;
 using System.Collections.Generic;
@@ -12,15 +13,20 @@ namespace Graph
     {
         static void Main(string[] args)
         {
-            DirectedGraph graph = new DirectedGraph(7);
-            Dijkstras djks = new Dijkstras(graph, 0);
-            //0 2 5
-            //0 3 6
-            //0 1 2
-            //3 6 3
-            //3 4 1
-            //1 5 9
-            //4 5 2
+            DirectedGraph graph = new DirectedGraph(7);//7 vertices
+            //Dijkstras djks = new Dijkstras(graph, 0);
+            //Prims mst = new Prims(graph);
+            kruskals mst = new kruskals(graph);
+            DirectedEdge [] edge = mst.treeEdges.ToArray();
+//0 6 1
+//0 2 5
+//0 3 6
+//0 1 2
+//3 6 3
+//3 4 1
+//1 5 9
+//1 2 3
+//4 5 2
         }
     }
 }
