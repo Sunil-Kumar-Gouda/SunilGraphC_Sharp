@@ -35,6 +35,7 @@ namespace GraphADT.Undirected
             }
             Console.Write("Enter the number of edges: ");
             E = int.Parse(Console.ReadLine());
+            _edges = new List <int>[E];
             Console.WriteLine("Enter source  followed by destination with space as delimeter:");
             for (int i = 0; i < E; i++)
             {

@@ -16,7 +16,7 @@ namespace Graph
             DirectedGraph graph = new DirectedGraph(7);//7 vertices
             //Dijkstras djks = new Dijkstras(graph, 0);
             //Prims mst = new Prims(graph);
-            kruskals mst = new kruskals(graph);
+            Kruskals mst = new Kruskals(graph);
             DirectedEdge [] edge = mst.treeEdges.ToArray();
 //0 6 1
 //0 2 5

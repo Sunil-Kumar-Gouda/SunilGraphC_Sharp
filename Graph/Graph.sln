@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphADT", "GraphADT\GraphADT.csproj", "{639CAEBB-2546-4068-82C6-3DC827D868AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADT", "ADT\ADT.csproj", "{A7E66232-0A9E-4672-A436-45594AD6B469}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{639CAEBB-2546-4068-82C6-3DC827D868AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{639CAEBB-2546-4068-82C6-3DC827D868AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{639CAEBB-2546-4068-82C6-3DC827D868AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E66232-0A9E-4672-A436-45594AD6B469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E66232-0A9E-4672-A436-45594AD6B469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E66232-0A9E-4672-A436-45594AD6B469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E66232-0A9E-4672-A436-45594AD6B469}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

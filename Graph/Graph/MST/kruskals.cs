@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Graph.MST
 {
-    class kruskals
+    class Kruskals
     {
         DirectedGraph G;
         //Contains the edges which will form the Minimus Spanning Tree
         public Queue<DirectedEdge> treeEdges;
-        public kruskals(DirectedGraph g)
+        public Kruskals(DirectedGraph g)
         {
             G = g;
             if (G.Edges == null || G.Edges.Count == 0)
