@@ -6,11 +6,63 @@ using System.Threading.Tasks;
 
 namespace ADT.Union_Find
 {
-    class UnionFind<T> where T : struct
+    public class UnionFind
     {
         private int _count;
-        private int  _id;
-
+        private int []id;
+        private int[] size;
+        private int N;
+        public int[] ComponentArray { get { return id; } }
+        public UnionFind(int n)
+        {
+            id = new int[n];
+            size = new int[n];
+            N = n;
+            _count = N;
+            for (int i=0;i< N;i++)
+            {
+                id[i] = i;
+                size[i] = 1;
+            }
+        }
+        public bool Union(int u,int v)
+        {
+            int comU = Find(u);
+            int comV = Find(v);
+            int changeTo;
+            int changeVertex;
+            if (comU == comV)
+                return false;
+            if(size[comU] <=size[comV])
+            {
+                id[comU] = v;
+                size[comV] +=size[comU];
+                size[comU] = 0;
+            }
+            else
+            {
+                id[comV] = u;
+                size[comU] += size[comV];
+                size[comV] = 0;
+            }
+            _count--;
+            return true;
+        }
+        public int Find(int u)
+        {
+            if (u >= N)
+                return -999;
+            int component = u;
+            while(component!=id[component])
+            {
+                component = id[component];
+            }
+            return component;
+        }
+        public bool Connected(int u,int v)
+        {
+            return Find(u) == Find(v);
+        }
 
 
 

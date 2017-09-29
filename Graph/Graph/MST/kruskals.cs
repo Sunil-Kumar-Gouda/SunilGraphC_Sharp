@@ -1,4 +1,5 @@
-﻿using GraphADT.Directed;
+﻿using ADT.Union_Find;
+using GraphADT.Directed;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,9 @@ namespace Graph.MST
     class Kruskals
     {
         DirectedGraph G;
+        public UnionFind uf;
+        //Returns readonly array which contain the component in which the vertex belongs
+        public IReadOnlyCollection<int> VertexComponent { get { return Array.AsReadOnly(uf.ComponentArray); } }
         //Contains the edges which will form the Minimus Spanning Tree
         public Queue<DirectedEdge> treeEdges;
         public Kruskals(DirectedGraph g)
@@ -17,6 +21,7 @@ namespace Graph.MST
             G = g;
             if (G.Edges == null || G.Edges.Count == 0)
                 return;
+            uf = new UnionFind(G.V);
             treeEdges = new Queue<DirectedEdge>();
             FindMst();
         }
@@ -27,33 +32,14 @@ namespace Graph.MST
             List<DirectedEdge> sortedEdges = new List<DirectedEdge>(G.Edges);
             //Sort the edges in acsending order of their weight. Because we will start creating MST by picking the smallest vertex first.
             sortedEdges.Sort();
-            DirectedEdge tempEdge;
-            //Store the unique vertex in sorted order
-            //SortedSet<DirectedEdge> sortedEdges = new SortedSet<DirectedEdge>(temp);
 
-            //Add To vertex's adjacency edges to sortedEdges Set
-            //AddAdjancency(sortedEdges, temp[0].To);
-            //Add From vertex's adjacency edges to sortedEdges Set
-            //AddAdjancency(sortedEdges, temp[0].From);
-
-            for (int i = 0; i < G.V - 1 && sortedEdges.Count != 0; i++)
+            foreach(DirectedEdge tempEdge in sortedEdges)
             {
-                bool notAdded = true;
-                while (notAdded)
+                if (!uf.Connected(tempEdge.From, tempEdge.To))
                 {
-                    tempEdge = sortedEdges.FirstOrDefault();
-                    if (tempEdge == null)
-                        break;
-                    sortedEdges.RemoveAt(0);
-                    if (!marked[tempEdge.To])
-                    {
-                        treeEdges.Enqueue(tempEdge);
-                        notAdded = false;
-                        marked[tempEdge.To] = true;
-                        marked[tempEdge.From] = true;
-                        //AddAdjancency(sortedEdges, tempEdge.To);
-                    }
-                }//end of while
+                    treeEdges.Enqueue(tempEdge);
+                    uf.Union(tempEdge.From, tempEdge.To);
+                }
             }//end of for
         }
         /// <summary>
