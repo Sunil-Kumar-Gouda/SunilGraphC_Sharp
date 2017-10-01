@@ -42,8 +42,7 @@ namespace Graph.ShortestPath
                 }
                 this['v',vertex] = true;
                 vertex = MinimumVertex(G);
-            }
-            
+            }  
         }
         private int MinimumVertex(DirectedGraph G)
         {

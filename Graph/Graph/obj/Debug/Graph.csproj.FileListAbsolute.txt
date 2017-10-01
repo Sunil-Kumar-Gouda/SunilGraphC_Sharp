@@ -7,13 +7,3 @@ D:\a\DS\Graph\Graph\obj\Debug\Graph.csprojResolveAssemblyReference.cache
 D:\a\DS\Graph\Graph\obj\Debug\Graph.exe
 D:\a\DS\Graph\Graph\obj\Debug\Graph.pdb
 D:\Sunil\SunilWorkspace\GithubRepository\SunilGraphC_Sharp\Graph\Graph\bin\Debug\Graph.exe.config
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\bin\Debug\Graph.exe.config
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\bin\Debug\Graph.exe
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\bin\Debug\Graph.pdb
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\bin\Debug\ADT.dll
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\bin\Debug\GraphADT.dll
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\bin\Debug\ADT.pdb
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\bin\Debug\GraphADT.pdb
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\obj\Debug\Graph.csprojResolveAssemblyReference.cache
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\obj\Debug\Graph.exe
-D:\a\DS\SunilGraphC_Sharp\Graph\Graph\obj\Debug\Graph.pdb

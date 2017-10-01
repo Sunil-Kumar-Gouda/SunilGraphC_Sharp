@@ -8,11 +8,10 @@ namespace Sorting.MergeSort
 {
     public class MergeSort
     {
-        int[] unsortedData;
         int[] sortedData;
         MergeSort(int[] data)
         {
-            unsortedData = data;
+            sortedData = data;
             CallSort(data);
         }
         private void CallSort(int[] data)
@@ -37,7 +36,7 @@ namespace Sorting.MergeSort
             int[] aux = new int[last - start + 1];
             for (int m = 0; m < n; m++)
             {
-                aux[m] = unsortedData[m + start];
+                aux[m] = sortedData[m + start];
             }
             int k = start;
             int i = 0;
@@ -47,12 +46,12 @@ namespace Sorting.MergeSort
             {
                 if(i==(n-1)/2 || aux[i]>= aux[j])
                 {
-                    unsortedData[k++] = aux[j++];
+                    sortedData[k++] = aux[j++];
                     count++;
                 }
                 if(j==n||aux[j]>aux[i])
                 {
-                    unsortedData[k++] = aux[i++];
+                    sortedData[k++] = aux[i++];
                     count++;
                 }
 

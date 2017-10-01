@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ADT.Heap
 {
-    class Temptt { }
     /*When we want T should be extended from a class then no need to write 'class' constraint since the Class name 
     itself indicate that it should be class type not any value or struct type or interface*/
     class MaxHeap<T> where T : class, IComparable
