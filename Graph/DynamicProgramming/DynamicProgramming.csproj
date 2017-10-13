@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{69EE1409-5811-4624-A67A-01A6F708B70F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{D7F8FFC8-8115-4E04-9F11-7021BCB6A63F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Graph</RootNamespace>
-    <AssemblyName>Graph</AssemblyName>
+    <RootNamespace>DynamicProgramming</RootNamespace>
+    <AssemblyName>DynamicProgramming</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,30 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DFS\DirectedDFS.cs" />
-    <Compile Include="MST\Kruskals.cs" />
-    <Compile Include="MST\Prims.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ClimbingStairs.cs" />
+    <Compile Include="MaximumProfitIntStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShortestPath\BellmanFord.cs" />
-    <Compile Include="ShortestPath\Dijkstras.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ADT\ADT.csproj">
-      <Project>{a7e66232-0a9e-4672-a436-45594ad6b469}</Project>
-      <Name>ADT</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DynamicProgramming\DynamicProgramming.csproj">
-      <Project>{D7F8FFC8-8115-4E04-9F11-7021BCB6A63F}</Project>
-      <Name>DynamicProgramming</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GraphADT\GraphADT.csproj">
-      <Project>{639caebb-2546-4068-82c6-3dc827d868aa}</Project>
-      <Name>GraphADT</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

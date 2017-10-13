@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{69EE1409-5811-4624-A67A-01A6F708B70F}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADT", "ADT\ADT.csproj", "{A7E66232-0A9E-4672-A436-45594AD6B469}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{180CC353-2A6F-45FD-8656-1CD1FC393FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgramming", "DynamicProgramming\DynamicProgramming.csproj", "{D7F8FFC8-8115-4E04-9F11-7021BCB6A63F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{180CC353-2A6F-45FD-8656-1CD1FC393FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180CC353-2A6F-45FD-8656-1CD1FC393FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{180CC353-2A6F-45FD-8656-1CD1FC393FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F8FFC8-8115-4E04-9F11-7021BCB6A63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F8FFC8-8115-4E04-9F11-7021BCB6A63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F8FFC8-8115-4E04-9F11-7021BCB6A63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F8FFC8-8115-4E04-9F11-7021BCB6A63F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
