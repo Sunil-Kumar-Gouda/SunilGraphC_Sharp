@@ -33,6 +33,7 @@ namespace Graph.ShortestPath
             int vertex = MinimumVertex(G) ;
             while (vertex != -1)
             {
+                //Update all the reachable vertex from the selected vertex to the minmimum weight upto now + wight of the edge.
                 foreach(DirectedEdge edge in G[vertex])
                 {
                     if(this[vertex] +edge.Weight<this[edge.To])
@@ -41,6 +42,7 @@ namespace Graph.ShortestPath
                     }
                 }
                 this['v',vertex] = true;
+                //Find the updated minimum vertex which was updated just before
                 vertex = MinimumVertex(G);
             }  
         }
