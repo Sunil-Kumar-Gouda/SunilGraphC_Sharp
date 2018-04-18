@@ -1,5 +1,0 @@
-D:\Sunil\SunilWorkspace\GithubRepository\SunilGraphC_Sharp\Graph\ADT\bin\Debug\ADT.dll
-D:\Sunil\SunilWorkspace\GithubRepository\SunilGraphC_Sharp\Graph\ADT\bin\Debug\ADT.pdb
-D:\Sunil\SunilWorkspace\GithubRepository\SunilGraphC_Sharp\Graph\ADT\obj\Debug\ADT.csprojResolveAssemblyReference.cache
-D:\Sunil\SunilWorkspace\GithubRepository\SunilGraphC_Sharp\Graph\ADT\obj\Debug\ADT.dll
-D:\Sunil\SunilWorkspace\GithubRepository\SunilGraphC_Sharp\Graph\ADT\obj\Debug\ADT.pdb

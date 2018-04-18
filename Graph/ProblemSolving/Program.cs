@@ -1,4 +1,5 @@
-﻿using ProblemSolving.Roman_Integer;
+﻿using DynamicProgramming;
+using ProblemSolving.Roman_Integer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,11 @@ class Program
         static Dictionary<int, char> dc2 = new Dictionary<int, char>();
         static void Main(string[] args)
         {
-            Console.WriteLine(RomanIntegerHelper.RomanToInteger("mcmxlix"));
-            int t = ConvertToDecimal("mcmxlix");
+            CoinChange coin = new CoinChange();
+            long[] c = new long[3] { 1, 2, 3 };
+            Console.WriteLine(coin.getWays(4, c));
+            //Console.WriteLine(RomanIntegerHelper.RomanToInteger("mcmxlix"));
+            //int t = ConvertToDecimal("mcmxlix");
         }
         public static int ConvertToDecimal(string numerals)
         {

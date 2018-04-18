@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClimbingStairs.cs" />
+    <Compile Include="CoinChange.cs" />
     <Compile Include="MaximumProfitIntStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
