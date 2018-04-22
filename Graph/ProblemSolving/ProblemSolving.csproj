@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursion\Palindirone.cs" />
+    <Compile Include="Recursion\Subset.cs" />
     <Compile Include="Roman_Integer\RomanIntegerHelper.cs" />
   </ItemGroup>
   <ItemGroup>

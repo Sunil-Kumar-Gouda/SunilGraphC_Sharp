@@ -1,4 +1,5 @@
 ﻿using DynamicProgramming;
+using ProblemSolving.Recursion;
 using ProblemSolving.Roman_Integer;
 using System;
 using System.Collections.Generic;
@@ -8,12 +9,103 @@ using System.Threading.Tasks;
 
 namespace ProblemSolving
 {
-class Program
+    class Program
     {
+        static void SpiralTraversealOfMatrix()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+            bool isCompleted = true;
+            int i = 0, j = 0, kthNumber = 0, v = 0;
+            int ub = 0, db = n - 1, lb = 0, rb = n - 1;
+            int[,] ar = new int[n, n];
+            /*  1 2 3
+                4 5 6
+                7 8 9
+            */
+            for (int r = 0; r < n; r++)
+                for (int c = 0; c < n; c++)
+                    ar[i, j] = ++v;
+            v = 0;
+            while (true)
+            {
+                isCompleted = true;
+                //right
+                for (j = lb; j <= rb; j++)
+                {
+                    v++;
+                    isCompleted = false;
+                    if (v == k)
+                    {
+                        kthNumber = ar[i, j];
+                        isCompleted = true;
+                    }
+                }
+                if (isCompleted)
+                    break;
+                j = rb;
+                rb--;
+
+                //down
+                for (i = ub + 1; i <= db; i++)
+                {
+                    v++;
+                    isCompleted = false;
+                    if (v == k)
+                    {
+                        kthNumber = ar[i, j];
+                        isCompleted = true;
+                    }
+                }
+                if (isCompleted)
+                    break;
+                i = db;
+                db--;
+
+                //left
+                for (j = rb; j >= lb; j--)
+                {
+                    v++;
+                    isCompleted = false;
+                    if (v == k)
+                    {
+                        kthNumber = ar[i, j];
+                        isCompleted = true;
+                    }
+                }
+                if (isCompleted)
+                    break;
+                j = lb;
+                lb++;
+
+                //up
+                for (i = db; i >= ub + 1; i--)
+                {
+                    v++;
+                    isCompleted = false;
+                    if (v == k)
+                    {
+                        kthNumber = ar[i, j];
+                        isCompleted = true;
+                    }
+                }
+                if (isCompleted)
+                    break;
+                ub++;
+                i = ub;
+            }
+            Console.WriteLine(kthNumber);
+        }
         static Dictionary<char, int> dc = new Dictionary<char, int>();
         static Dictionary<int, char> dc2 = new Dictionary<int, char>();
         static void Main(string[] args)
         {
+            SpiralTraversealOfMatrix();
+            bool isPalindrone = Palindirone.CheckPalindironeInt(1112111);
+            Subset.PrintAllBinaryNumberNoConsecutive1(2);
+
+            var convertingStringArrayToDouble=Array.ConvertAll(args, x => double.Parse(x));
+
             CoinChange coin = new CoinChange();
             long[] c = new long[3] { 1, 2, 3 };
             Console.WriteLine(coin.getWays(4, c));
@@ -81,16 +173,16 @@ class Program
     }
     static class RepeatChar
     {
-        public static string Repeat(this char c,int count)
+        public static string Repeat(this char c, int count)
         {
-           return Enumerable.Repeat(c, count).Aggregate(
-                //1. First parameter accumulator
-                new StringBuilder(),
-                //2. Func<AccumulatorValue,array item,AccumulatorValue
-                (accumulator,item)=>accumulator.Append(item),
-                //3. What to return from the accumulator by aggregate method
-                ac=>ac.ToString()
-                );
+            return Enumerable.Repeat(c, count).Aggregate(
+                 //1. First parameter accumulator
+                 new StringBuilder(),
+                 //2. Func<AccumulatorValue,array item,AccumulatorValue
+                 (accumulator, item) => accumulator.Append(item),
+                 //3. What to return from the accumulator by aggregate method
+                 ac => ac.ToString()
+                 );
         }
     }
 }
