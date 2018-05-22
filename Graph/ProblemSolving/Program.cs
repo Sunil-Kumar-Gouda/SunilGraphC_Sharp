@@ -100,15 +100,18 @@ namespace ProblemSolving
         static Dictionary<int, char> dc2 = new Dictionary<int, char>();
         static void Main(string[] args)
         {
-            SpiralTraversealOfMatrix();
-            bool isPalindrone = Palindirone.CheckPalindironeInt(1112111);
-            Subset.PrintAllBinaryNumberNoConsecutive1(2);
+            //int n = int.Parse(Console.ReadLine());
+            //int []bst = Array.ConvertAll(Console.ReadLine().Split(new char []{ ' ' }),chs=>int.Parse(chs));
+            Console.WriteLine(TreeProblem.TreeProblem.CountLeafAfterRemove(new int[] {-1, 0 ,0 ,1 ,1}, 0));
+            //SpiralTraversealOfMatrix();
+            //bool isPalindrone = Palindirone.CheckPalindironeInt(1112111);
+            //Subset.PrintAllBinaryNumberNoConsecutive1(2);
 
-            var convertingStringArrayToDouble=Array.ConvertAll(args, x => double.Parse(x));
+            //var convertingStringArrayToDouble=Array.ConvertAll(args, x => double.Parse(x));
 
-            CoinChange coin = new CoinChange();
-            long[] c = new long[3] { 1, 2, 3 };
-            Console.WriteLine(coin.getWays(4, c));
+            //CoinChange coin = new CoinChange();
+            //long[] c = new long[3] { 1, 2, 3 };
+            //Console.WriteLine(coin.getWays(4, c));
             //Console.WriteLine(RomanIntegerHelper.RomanToInteger("mcmxlix"));
             //int t = ConvertToDecimal("mcmxlix");
         }

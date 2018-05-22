@@ -48,6 +48,7 @@
     <Compile Include="Recursion\Palindirone.cs" />
     <Compile Include="Recursion\Subset.cs" />
     <Compile Include="Roman_Integer\RomanIntegerHelper.cs" />
+    <Compile Include="TreeProblem\TreeProblem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
