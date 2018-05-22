@@ -100,6 +100,11 @@ namespace ProblemSolving
         static Dictionary<int, char> dc2 = new Dictionary<int, char>();
         static void Main(string[] args)
         {
+            int length = int.Parse(Console.ReadLine());
+            int[] ar = new int[length];
+            for (int i = 0; i < length; i++)
+                ar[i] = int.Parse(Console.ReadLine());
+            LIS.LongestIncreasingSubsequence(ar);
             //int n = int.Parse(Console.ReadLine());
             //int []bst = Array.ConvertAll(Console.ReadLine().Split(new char []{ ' ' }),chs=>int.Parse(chs));
             Console.WriteLine(TreeProblem.TreeProblem.CountLeafAfterRemove(new int[] {-1, 0 ,0 ,1 ,1}, 0));
