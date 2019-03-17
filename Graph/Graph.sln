@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgramming", "Dynam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemSolving", "ProblemSolving\ProblemSolving.csproj", "{1F813DAB-EABB-471B-B06E-9694DBDBC6AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoExpert", "AlgoExpert\AlgoExpert.csproj", "{E21FAF06-EA4D-41C9-9C3E-96F2701F9654}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{1F813DAB-EABB-471B-B06E-9694DBDBC6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F813DAB-EABB-471B-B06E-9694DBDBC6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F813DAB-EABB-471B-B06E-9694DBDBC6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E21FAF06-EA4D-41C9-9C3E-96F2701F9654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21FAF06-EA4D-41C9-9C3E-96F2701F9654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21FAF06-EA4D-41C9-9C3E-96F2701F9654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21FAF06-EA4D-41C9-9C3E-96F2701F9654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
