@@ -82,5 +82,32 @@ namespace AlgoExpert.ArrayT
             }
             return list;
         }
+
+        public static List<int[]> FourNumberSum(int []array,int targetSum)
+        {
+            List<int[]> output=new List<int[]>();
+            Dictionary<int, int[]> duplets=new Dictionary<int, int[]>();
+            int sum;
+            for(int i=0;i<array.Length-1;i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    sum = targetSum - (array[i] + array[j]);
+                    if(duplets.ContainsKey(sum))
+                    {
+                        output.Add(new int[] { array[i], array[j], duplets[sum][0], duplets[sum][1] });
+                    }
+                }
+                for(int j=0;j< i;j++)
+                {
+                    sum=targetSum - (array[i] + array[j]);
+                    if(!duplets.ContainsKey(sum))
+                    {
+                        duplets.Add(sum, new int[] { array[i], array[j] });
+                    }
+                }
+            }
+            return output;
+        }
     }
 }
