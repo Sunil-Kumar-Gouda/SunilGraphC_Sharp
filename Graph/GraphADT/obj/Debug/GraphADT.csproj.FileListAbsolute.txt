@@ -1,4 +1,0 @@
-D:\a\DS\Graph\GraphADT\bin\Debug\GraphADT.dll
-D:\a\DS\Graph\GraphADT\bin\Debug\GraphADT.pdb
-D:\a\DS\Graph\GraphADT\obj\Debug\GraphADT.dll
-D:\a\DS\Graph\GraphADT\obj\Debug\GraphADT.pdb
